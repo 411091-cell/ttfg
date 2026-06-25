@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA 選人遊戲</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1>NBA 選人遊戲</h1>
+      <p>從經典球星中選出你的夢幻五人陣容，看看你是否能打敗電腦隊。</p>
+    </header>
+
+    <main>
+      <section class="panel panel-left">
+        <div class="panel-header">
+          <h2>球員名單</h2>
+          <p>最多選 5 名球員。</p>
+        </div>
+        <div id="playerGrid" class="player-grid"></div>
+      </section>
+
+      <section class="panel panel-right">
+        <div class="panel-header">
+          <h2>你的陣容</h2>
+          <div class="status-row">
+            <span id="selectedCount">已選 0 / 5</span>
+            <span id="totalPower">總戰力 0</span>
+          </div>
+        </div>
+
+        <div id="selectedList" class="selected-list">
+          <p class="empty-label">點擊球員卡片加入你的陣容。</p>
+        </div>
+
+        <div class="actions">
+          <button id="apiFillButton" class="secondary">從 API 自動填入</button>
+          <button id="resetPlayersButton" class="secondary">重置球員名單</button>
+          <button id="confirmButton" class="primary">完成選擇</button>
+          <button id="clearButton" class="secondary">重新開始</button>
+        </div>
+
+        <div id="sheetStatus" class="sheet-status">系統尚未同步到 Google Sheet。</div>
+        <div id="resultBox" class="result-box hidden"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
